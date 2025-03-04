@@ -1,0 +1,116 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: perspective(1000px);
+}
+
+.form form {
+  width: 100%;
+}
+
+h2 {
+  font-size: 28px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.form > span {
+  margin-bottom: 10px;
+  color: #555;
+  text-align: center;
+}
+
+input {
+  margin: 10px 0;
+  padding: 15px;
+  width: 100%;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  background-color: #fff;
+  box-shadow: 0 0 8px rgba(38, 92, 255, 0.7);
+}
+
+div {
+  position: relative;
+}
+
+img {
+  position: absolute;
+  top: 50%;
+  right: 15px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+button {
+  padding: 12px 25px;
+  background-color: #2575fc;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #6a11cb;
+}
+
+/* Adding a complex bounce animation to form inputs */
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-300px);
+    opacity: 0;
+  }
+  50% {
+    transform: translateY(30px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Keyframe for button hover effect */
+@keyframes buttonHover {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  animation: buttonHover 0.7s ease;
+}
+
+.form {
+  animation: bounceIn 1s ease-out;
+}
+
+@keyframes bounceIn {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
