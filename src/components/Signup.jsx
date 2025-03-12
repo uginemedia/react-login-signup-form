@@ -3,11 +3,11 @@ import "./Form.css";
 import eyeOpen from "../assets/eye-open.png";
 import eyeClose from "../assets/eye-close.png";
 
-function Signup(props) {
+function Signup() {
   const inputPassword = useRef();
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSeePassword = () => {
+  const handleShowPassword = () => {
     return setShowPassword(!showPassword);
   };
 
@@ -27,9 +27,9 @@ function Signup(props) {
         <div>
           <input ref={inputPassword} type="password" placeholder="Password" />
           {showPassword ? (
-            <img onClick={handleSeePassword} src={eyeOpen} />
+            <img onClick={handleShowPassword} src={eyeOpen} />
           ) : (
-            <img onClick={handleSeePassword} src={eyeClose} />
+            <img onClick={handleShowPassword} src={eyeClose} />
           )}
         </div>
 

@@ -7,7 +7,7 @@ function Login() {
   const inputPassword = useRef();
   const [showPassword, setShowPassword] = useState(false);
 
-  const handleSeePassword = () => {
+  const handleShowPassword = () => {
     return setShowPassword(!showPassword);
   };
 
@@ -26,9 +26,9 @@ function Login() {
         <div>
           <input ref={inputPassword} type="password" placeholder="Password" />
           {showPassword ? (
-            <img onClick={handleSeePassword} src={eyeOpen} />
+            <img onClick={handleShowPassword} src={eyeOpen} />
           ) : (
-            <img onClick={handleSeePassword} src={eyeClose} />
+            <img onClick={handleShowPassword} src={eyeClose} />
           )}
         </div>
 
